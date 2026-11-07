@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --peach-50:  #fff6f1;
+    --peach-100: #ffe9dd;
+    --peach-200: #ffd2bb;
+    --peach-400: #ff9f7a;
+    --peach-500: #ff8a5c;
+    --peach-600: #f06a3a;
+    --leaf:      #4f8a5b;
+    --ink:       #2b1a14;
+    --ink-soft:  #6b554b;
+    --bg:        #fffaf7;
+    --card:      #ffffff;
+    --line:      #f1dfd5;
+    --radius:    18px;
+    --shadow:    0 10px 30px -12px rgba(176, 82, 40, .25);
+  }
+
+  html {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: #2b1a14;
+    background-color: #fffaf7;
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Fraunces', Georgia, serif;
+    line-height: 1.15;
+  }
+
+  /* High contrast accessible focus rings */
+  :focus-visible {
+    outline: 2px solid #ff8a5c;
+    outline-offset: 2px;
+  }
+}
+
+/* Custom subtle scrollbars in peach tone */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #ffe9dd;
+}
+::-webkit-scrollbar-thumb {
+  background: #ffd2bb;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ff9f7a;
+}
+
+/* Custom Peachology Button Classes */
+.btn-peach-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  padding: 0.8em 1.6em;
+  border-radius: 9999px;
+  font-weight: 600;
+  background-color: #ff8a5c;
+  color: #ffffff;
+  box-shadow: 0 10px 30px -12px rgba(176, 82, 40, 0.25);
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+.btn-peach-primary:hover {
+  background-color: #f06a3a;
+  transform: translateY(-2px);
+}
+
+.btn-peach-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  padding: 0.8em 1.6em;
+  border-radius: 9999px;
+  font-weight: 600;
+  border: 2px solid #ff9f7a;
+  color: #2b1a14;
+  background-color: transparent;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+.btn-peach-ghost:hover {
+  background-color: #ffe9dd;
+  transform: translateY(-2px);
+}
